@@ -16,7 +16,6 @@ fi
 # if ! echo "tainted" | sudo nc -U /run/ssh-taint.sock; then
 if ! echo "tainted" | sudo tee -a /run/ssh-taint 1>/dev/null; then
     echo "Error trying to write to file, cannot properly taint node."
-    exit 1
 fi
 
 # Check if we have a TTY assigned
